@@ -8,7 +8,6 @@ import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-import java.net.InetAddress;
 import java.util.ArrayList;
 
 public class Server {
