@@ -31,6 +31,7 @@ public class RPGServerInitializer extends ChannelInitializer<SocketChannel>{
         channelPipeline.addLast("decoder", new StringDecoder());
         channelPipeline.addLast("encoder", new StringEncoder());
         channelPipeline.addLast("handler", new RPGServerHandler(serverEvent, channels));
+        channelPipeline.addLast("exception", new ExceptionHandler());
     }
 
     public ChannelGroup getChannels(){

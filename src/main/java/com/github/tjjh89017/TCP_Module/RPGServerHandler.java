@@ -44,6 +44,7 @@ public class RPGServerHandler extends SimpleChannelInboundHandler<String>{
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
 
+
         System.out.println("RemoteAddress : " + ctx.channel().remoteAddress() + " Inactive");
 
         delChannel(ctx.channel());
