@@ -52,12 +52,10 @@ public class Client{
             setHost(inetAddress.getHostAddress(), port);
             connect();
         }
-        catch (IOException e){
+        catch (IOException e) {
             return false;
         }
-        finally {
-            return true;
-        }
+        return true;
     }
 
     public synchronized void send(String msg) throws IOException{
@@ -78,7 +76,9 @@ public class Client{
 
     public void close() throws IOException{
 
-        socket.close();
+        if(socket != null) {
+            socket.close();
+        }
     }
 
 

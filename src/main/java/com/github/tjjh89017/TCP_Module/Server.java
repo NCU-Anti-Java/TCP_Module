@@ -54,6 +54,7 @@ public class Server {
         ArrayList<String> arrayList = new ArrayList<String>();
         ChannelGroup channels = rpgServerInitializer.getChannels();
         for(Channel channel : channels){
+            System.out.println(channel.remoteAddress().toString());
             arrayList.add(channel.remoteAddress().toString());
         }
         return arrayList;
